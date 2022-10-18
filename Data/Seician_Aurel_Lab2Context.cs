@@ -17,5 +17,7 @@ namespace Seician_Aurel_Lab2.Data
         public DbSet<Seician_Aurel_Lab2.Models.Book> Book { get; set; } = default!;
 
         public DbSet<Seician_Aurel_Lab2.Models.Publisher> Publisher { get; set; }
+
+        public DbSet<Seician_Aurel_Lab2.Models.Author> Author { get; set; }
     }
 }
