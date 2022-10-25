@@ -25,5 +25,7 @@ namespace Seician_Aurel_Lab2.Models
 
         public Publisher? Publisher { get; set; }
 
+        public ICollection<BookCategory>? BookCategories { get; set; }
+
     }
 }
