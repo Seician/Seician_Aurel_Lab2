@@ -7,7 +7,7 @@ namespace Seician_Aurel_Lab2.Models
 {
     public class Book
     {
-       public int Id { get; set; }
+        public int Id { get; set; }
        
         [Display(Name = "Book Title")]
         public string Title { get; set; }
