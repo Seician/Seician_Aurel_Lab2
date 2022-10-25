@@ -66,7 +66,7 @@ selectedCategories)
             .Include(i => i.Publisher)
             .Include(i => i.BookCategories)
             .ThenInclude(i => i.Category)
-            .FirstOrDefaultAsync(s => s.ID == id);
+            .FirstOrDefaultAsync(s => s.Id == id);
             if (bookToUpdate == null)
             {
                 return NotFound();

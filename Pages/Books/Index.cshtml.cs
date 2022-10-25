@@ -39,7 +39,7 @@ namespace Seician_Aurel_Lab2.Pages.Books
             {
                 BookID = id.Value;
                 Book book = BookD.Books
-                .Where(i => i.ID == id.Value).Single();
+                .Where(i => i.Id == id.Value).Single();
                 BookD.Categories = book.BookCategories.Select(s => s.Category);
             }
         }
