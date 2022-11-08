@@ -59,23 +59,24 @@ searchString)
 
 
                 if (id != null)
-            {
-                BookID = id.Value;
-                Book book = BookD.Books
-                .Where(i => i.Id == id.Value).Single();
-                BookD.Categories = book.BookCategories!.Select(s => s.Category);
-
-                switch (sortOrder)
                 {
-                    case "title_desc":
-                        BookD.Books = BookD.Books.OrderByDescending(s =>
-                       s.Title);
-                        break;
-                    case "author_desc":
-                        BookD.Books = BookD.Books.OrderByDescending(s =>
-                       s.Author.FullName);
-                        break;
+                    BookID = id.Value;
+                    Book book = BookD.Books
+                    .Where(i => i.Id == id.Value).Single();
+                    BookD.Categories = book.BookCategories!.Select(s => s.Category);
 
+                    switch (sortOrder)
+                    {
+                        case "title_desc":
+                            BookD.Books = BookD.Books.OrderByDescending(s =>
+                           s.Title);
+                            break;
+                        case "author_desc":
+                            BookD.Books = BookD.Books.OrderByDescending(s =>
+                           s.Author.FullName);
+                            break;
+
+                    }
                 }
             }
         }
