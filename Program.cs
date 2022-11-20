@@ -19,6 +19,13 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 
 var app = builder.Build();
 
+builder.Services.AddRazorPages(options =>
+{
+    options.Conventions.AuthorizeFolder("/Books");
+    options.Conventions.AllowAnonymousToPage("/Books/Index");
+    options.Conventions.AllowAnonymousToPage("/Books/Details");
+
+});
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
