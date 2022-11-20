@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -10,6 +12,7 @@ using Seician_Aurel_Lab2.Models;
 
 namespace Seician_Aurel_Lab2.Pages.Books
 {
+    [Authorize(Roles = "Admin")]
     public class CreateModel :  BookCategoriesPageModel
     {
         private readonly Seician_Aurel_Lab2.Data.Seician_Aurel_Lab2Context _context;
