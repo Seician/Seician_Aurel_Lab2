@@ -18,6 +18,11 @@ namespace Seician_Aurel_Lab2.Models
 
         [Column(TypeName = "decimal(6, 2)")]
         public decimal Price { get; set; }
+<<<<<<< Updated upstream
+=======
+        [Column(TypeName = "decimal(6, 2)")]
+ [Range(0.01, 500)]
+>>>>>>> Stashed changes
 
         [DataType(DataType.Date)]
         public DateTime PublishingDate { get; set; }
