@@ -18,11 +18,7 @@ namespace Seician_Aurel_Lab2.Models
 
         [Column(TypeName = "decimal(6, 2)")]
         public decimal Price { get; set; }
-        [Column(TypeName = "decimal(6, 2)")
- [Range(0.01, 500)]
 
-
-        [DataType(DataType.Date)]
         [DataType(DataType.Date)]
         public DateTime PublishingDate { get; set; }
         public int? PublisherID { get; set; }
